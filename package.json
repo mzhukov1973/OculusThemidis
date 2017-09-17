@@ -1,8 +1,8 @@
 {
-  "name": "oculus-themidis",
+  "name": "OculusThemidis",
   "version": "0.0.1",
   "private": true,
-  "homepage": "https://mzhukov1973.github.io/oculus-themidis",
+  "homepage": "https://mzhukov1973.github.io/OculusThemidis",
   "dependencies": {
     "gh-pages": "^1.0.0",
     "material-ui": "^0.19.1",
