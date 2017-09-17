@@ -3,3 +3,5 @@ Version History
 0.0.1 - Initial upload to GitHub
 
 0.0.2 - Set up gh-pages with autobuilt deploys at https://mzhukov1973.github.io/OculusThemidis
+
+0.0.3 - Fixed routing issues by correctly setting basename for react-routers' <BrowserRouter>

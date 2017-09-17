@@ -204,7 +204,7 @@ store.dispatch({type:'LOAD_ADM_PRICE_WHOLE_REQUEST'});//Have to do it in paralle
 //====================
 
 render(
-     <BrowserRouter>
+     <BrowserRouter basename="/OculusThemidis">
       <Provider store={store}>
        <App/>
       </Provider>
