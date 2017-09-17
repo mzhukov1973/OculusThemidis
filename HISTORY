@@ -5,3 +5,8 @@ Version History
 0.0.2 - Set up gh-pages with autobuilt deploys at https://mzhukov1973.github.io/OculusThemidis
 
 0.0.3 - Fixed routing issues by correctly setting basename for react-routers' <BrowserRouter>
+
+0.0.4 - Added relevant info to package.json as required/recommended per standard
+      - Made contents of /public directory fully React standards-compliant
+      - Made maximum of non-js resources (CSS files, fonts, images, etc) available to components via import {..}, to reap maximum benefits from apps' intended architecture
+      - Made some updates to README.md
