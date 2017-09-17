@@ -6,7 +6,8 @@ Version History
 
 0.0.3 - Fixed routing issues by correctly setting basename for react-routers' <BrowserRouter>
 
-0.0.4 - Added relevant info to package.json as required/recommended per standard
+0.0.4 - Added relevant info to package.json as required/recommended per relevant standard
       - Made contents of /public directory fully React standards-compliant
       - Made maximum of non-js resources (CSS files, fonts, images, etc) available to components via import {..}, to reap maximum benefits from apps' intended architecture
       - Made some updates to README.md
+      - Renamed HISTORY to CHANGES to keep closer to canon

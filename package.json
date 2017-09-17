@@ -1,8 +1,14 @@
 {
   "name": "oculus-themidis",
   "version": "0.0.4",
+  "license": "Apache-2.0",
+  "keywords": ["React", "create-react-app", "one-page-app"],
+  "description": "React.js based One-Page-App for a small but spunky law firm.",
   "private": true,
+  "author": "Maxim Zhukov <mzhukov31415dev@gmail.com> (https://mzhukov1973.github.io/oculus-themidis)",
+  "repository": {"type": "git", "url": "https://github.com/mzhukov1973/oculus-themidis.git"},
   "homepage": "https://mzhukov1973.github.io/oculus-themidis",
+  "bugs": "https://github.com/mzhukov1973/oculus-themidis/issue",
   "dependencies": {
     "gh-pages": "^1.0.0",
     "material-ui": "^0.19.1",
