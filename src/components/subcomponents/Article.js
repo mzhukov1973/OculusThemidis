@@ -18,7 +18,9 @@ import Paper from 'material-ui/Paper';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { ResponsiveEmbed } from 'react-bootstrap'
 import PropTypes from 'prop-types';
-import '../css/Article.css'
+import '../css/bootstrap.min.css';
+import '../css/bootstrap-theme.min.css';
+import '../css/Article.css';
 
 class Article extends React.Component {
 

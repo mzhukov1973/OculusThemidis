@@ -18,6 +18,8 @@ import Paper from 'material-ui/Paper';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {ResponsiveEmbed,Carousel} from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import './css/bootstrap.min.css';
+import './css/bootstrap-theme.min.css';
 import './css/Contacts.css';
 
 const carousel_options = {

@@ -16,6 +16,9 @@
 import React from 'react'
 import { PropTypes } from 'prop-types'
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table'
+import './css/bootstrap.min.css';
+import './css/bootstrap-theme.min.css';
+import './css/react-bootstrap-table-all.min.css';
 import './css/admTables.css'
 
 const selectRowProp = {

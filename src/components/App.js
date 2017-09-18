@@ -27,6 +27,9 @@ import About2 from '../containers/About2'
 import About_adm2 from '../containers/About_adm2'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 //import PropTypes from 'prop-types';
+import './css/bootstrap.min.css';
+import './css/bootstrap-theme.min.css';
+import './css/react-bootstrap-table-all.min.css';
 import './css/App.css';
 
 
