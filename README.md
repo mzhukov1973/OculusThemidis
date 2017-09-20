@@ -55,7 +55,7 @@
       - [ ] Add automatic actions editor - with rules to auto-generate and apply actions according to given patterns (see documentation for details)
 - [ ] Finalise and apply consistent styling to all sections of the app, including admin dashboard
 - [ ] Properly protect admin dashboard from unauthorised access (see documentation about apps' architechture details)
-- [ ] Add i18n proper support with proper selection of language to use in [admin dashboard](https://mzhukov1973.github.io/oculus-themides/adm)
-- [ ] Add Russian language support
+- [ ] :question:*Add i18n proper support with proper selection of language to use in [admin dashboard](https://mzhukov1973.github.io/oculus-themides/adm)*
+- [ ] :question:*Add Russian language support*
 - [x] ~~Refactor components' names to bring all in line with CamelCase coding style requirement~~
 - [x] ~~Move initial state to a separate module in `/modules/initialStates.js` from `/index.js`~~
