@@ -44,7 +44,7 @@ class ListItemCust extends React.Component {
 }
 
 
-class NewsTableList extends React.Component {
+class News extends React.Component {
 
   render() {
     let nD = this.props.newsData;
@@ -75,7 +75,7 @@ class NewsTableList extends React.Component {
   }
 }
 
-NewsTableList.propTypes = {
+News.propTypes = {
   newsData: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
@@ -87,4 +87,4 @@ NewsTableList.propTypes = {
   ).isRequired
 }
 
-export default NewsTableList
+export default News

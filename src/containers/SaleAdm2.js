@@ -13,45 +13,23 @@
 /*  See the License for the specific language governing permissions and      */
 /*  limitations under the License.                                           */
 /*===========================================================================*/
-import React from 'react'
-import Article_adm from './subcomponents/Article_adm.js';
-import PropTypes from 'prop-types';
-import './css/admTables.css'
+import { connect } from 'react-redux'
+import SaleAdm from '../components/SaleAdm'
+import { actADD, actDEL, actEDIT } from'../actions'
 
-class About_adm extends React.Component {
-
-  render() {
-    return (
-<div>
-     <Article_adm articleData={this.props.adm_abtData.articles[0]}/>
-     <Article_adm articleData={this.props.adm_abtData.articles[1]}/>
-     <Article_adm articleData={this.props.adm_abtData.articles[2]}/>
-</div>
-    );
-  }
+const mapStateToProps = ( state ) => {
+  return { adm_actData: state.adm_actData };
 }
 
-About_adm.propTypes = 
+const mapDispatchToProps = (dispatch,ownProps) => 
 {
- adm_abtData: PropTypes.shape(
-  {
-   articles: PropTypes.arrayOf(PropTypes.shape(
-                {
-                 id:PropTypes.number.isRequired, 
-                 last_edit:PropTypes.string.isRequired, 
-                 hdng:PropTypes.string.isRequired, 
-                 subhdng:PropTypes.string.isRequired, 
-                 bdy:PropTypes.string.isRequired, 
-                 pic:PropTypes.string.isRequired, 
-                 bg:PropTypes.string.isRequired, 
-                 visibility:PropTypes.number.isRequired,
-                 updating:PropTypes.number.isRequired 
-                }
-               ).isRequired
-              ).isRequired
+  return {
+   onActClickAdd: (row)                    => {dispatch({type:actADD.REQ, 'row':row});}, 
+   onActClickDel: (row)                    => {dispatch({type:actDEL.REQ, 'row':row});}, 
+   onActCellEdit: (row,cellName,cellValue) => {dispatch({type:actEDIT.REQ,'row':row,'cellName':cellName,'cellValue':cellValue});} 
   }
- ).isRequired
 }
 
+const SaleAdm2 = connect(mapStateToProps,mapDispatchToProps)(SaleAdm);
 
-export default About_adm
+export default SaleAdm2

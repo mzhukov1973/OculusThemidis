@@ -16,15 +16,18 @@
 import React, { Component } from 'react';
 import { Navbar,Nav,NavItem,NavDropdown,MenuItem } from 'react-bootstrap';
 import { Switch, Route, Link } from 'react-router-dom'
-import PriceTableList2Sec from '../containers/PriceTableList2Sec'
-import NewsTableList2Sec from '../containers/NewsTableList2Sec'
-import NewsTable2 from '../containers/NewsTable2'
-import PriceTable2 from '../containers/PriceTable2'
-import Sale from '../components/Sale'
-import Contacts2 from '../containers/Contacts2'
-import ContactsTable2 from '../containers/ContactsTable2'
-import About2 from '../containers/About2'
-import About_adm2 from '../containers/About_adm2'
+
+import News2 from        '../containers/News2'
+import NewsAdm2 from     '../containers/NewsAdm2'
+import Price2 from       '../containers/Price2'
+import PriceAdm2 from    '../containers/PriceAdm2'
+import Sale2 from        '../containers/Sale2'
+import SaleAdm2 from     '../containers/SaleAdm2'
+import About2 from       '../containers/About2'
+import AboutAdm2 from    '../containers/AboutAdm2'
+import Contacts2 from    '../containers/Contacts2'
+import ContactsAdm2 from '../containers/ContactsAdm2'
+
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 //import PropTypes from 'prop-types';
 import './css/bootstrap.min.css';
@@ -75,17 +78,23 @@ class Main extends Component {
     return (
       <div className="main">
 <Switch>
- <Route exact path="/"        component={NewsTableList2Sec}/>
- <Route path="/news"          component={NewsTableList2Sec}/>
- <Route path="/adm/news"      component={NewsTable2}/>
- <Route path="/adm/price"     component={PriceTable2}/>
- <Route path="/adm/about"     component={About_adm2}/>
+ <Route exact path="/"        component={News2}/>
+
+ <Route path="/news"          component={News2}/>
+ <Route path="/adm/news"      component={NewsAdm2}/>
+
+ <Route exact path="/price"   component={Price2}/>
+ <Route path="/price/:number" component={Price2}/>
+ <Route path="/adm/price"     component={PriceAdm2}/>
+
+ <Route path="/sale"          component={Sale2}/>
+ <Route path="/adm/sale"      component={SaleAdm2}/>
+
  <Route path="/about"         component={About2}/>
- <Route path="/adm/contacts"  component={ContactsTable2}/>
+ <Route path="/adm/about"     component={AboutAdm2}/>
+
  <Route path="/contacts"      component={Contacts2}/>
- <Route exact path="/price"   component={PriceTableList2Sec}/>
- <Route path="/price/:number" component={PriceTableList2Sec}/>
- <Route path="/sale"          component={Sale}/>
+ <Route path="/adm/contacts"  component={ContactsAdm2}/>
 </Switch>
       </div>
     );

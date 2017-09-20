@@ -32,7 +32,7 @@ const selectRowProp = {
 
 const visTypes = [ 1, 0 ];
 
-class NewsTable extends React.Component {
+class NewsAdm extends React.Component {
 
 columnClassNameF(fieldValue, row, rowIdx, colIdx) {
 // fieldValue - as is, row - the whole row object, rowIdx, colIdx - cell coords
@@ -55,7 +55,7 @@ columnClassNameF(fieldValue, row, rowIdx, colIdx) {
   }
 }
 
-NewsTable.propTypes = {
+NewsAdm.propTypes = {
   adm_newsData: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
@@ -71,4 +71,4 @@ NewsTable.propTypes = {
   , onCellEdit: PropTypes.func.isRequired
 }
 
-export default NewsTable
+export default NewsAdm

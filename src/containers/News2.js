@@ -14,32 +14,17 @@
 /*  limitations under the License.                                           */
 /*===========================================================================*/
 import { connect } from 'react-redux'
-import { newsADD, newsDEL, newsEDIT } from'../actions'
-import NewsTable from '../components/NewsTable'
+import News from '../components/News'
+
+function checkDisplay(newsItem)
+{
+ return (newsItem.visibility === 1);
+}
 
 const mapStateToProps = ( state ) => {
-  return { adm_newsData: state.adm_newsData };
+  return { newsData: state.newsData.filter(checkDisplay) };
 }
 
-const mapDispatchToProps = (dispatch,ownProps) => {
-  return {
-    onClickAdd: (row) => {
-     dispatch({type:newsADD.REQ, 'row':row});//Sending PUSH_NEW_NEWS_ITEM_REQUEST action, to be intercepted by Saga watcher
-    },
-    onClickDel: (row) => {
-     dispatch({type:newsDEL.REQ, 'row':row});//Sending DEL_NEWS_ITEM_REQUEST action, to be intercepted by Saga watcher
-    },
-    onCellEdit: (row,cellName,cellValue) => {
-     dispatch({type:newsEDIT.UPD, 'id':row.id, 'updating':1});
-     dispatch({type:newsEDIT.REQ,'row':row,'cellName':cellName,'cellValue':cellValue});//Sending EDIT_NEWS_ITEM_REQUEST action, to be intercepted by Saga watcher
-    }
-  }
-}
+const News2 = connect(mapStateToProps)(News);
 
-const NewsTable2 = connect(mapStateToProps,mapDispatchToProps)(NewsTable);
-
-export default NewsTable2
-
-
-
-
+export default News2

@@ -14,7 +14,7 @@
 /*  limitations under the License.                                           */
 /*===========================================================================*/
 import { connect } from 'react-redux'
-import ContactsTable from '../components/ContactsTable'
+import ContactsAdm from '../components/ContactsAdm'
 import { cntADD, cntDEL, cntEDIT } from'../actions'
 
 const mapStateToProps = ( state ) => {
@@ -31,6 +31,6 @@ const mapDispatchToProps = (dispatch,ownProps) =>
   }
 }
 
-const ContactsTable2 = connect(mapStateToProps,mapDispatchToProps)(ContactsTable);
+const ContactsAdm2 = connect(mapStateToProps,mapDispatchToProps)(ContactsAdm);
 
-export default ContactsTable2
+export default ContactsAdm2

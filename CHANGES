@@ -21,4 +21,8 @@ Version History
         - Updated manifest.json to include proper info to make for a more smooth web app experience
           - Added icon sizes other than 192x192 and 512x512 (namely: 48x48, 64x64 72x72, 96x96, 128x128, 144x144, 168x168, 256x256, 384x384) - all PNG
           - Added splashscreen resources
-          - Updated more versions of favicon to favicon.ico. It cow contains 16,32,48,64,72,96,128 and 256 sized favicon.ico images.
+          - Updated more versions of favicon to favicon.ico. It cow contains 16,32,48,64,72,96,128 and 256 sized favicon.ico images
+
+0.0.5-rc1
+        - Refactored components' names to bring all in line with CamelCase coding style requirement
+        - Moved initial state to a separate module in `/modules/initialStates.js` from `/index.js`

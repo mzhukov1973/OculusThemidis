@@ -31,7 +31,7 @@ const selectRowProp = {
 
 const visTypes = [ 1, 0 ]
 
-class ContactsTable extends React.Component {
+class ContactsAdm extends React.Component {
 
   render() {
     return (
@@ -86,7 +86,7 @@ class ContactsTable extends React.Component {
   }
 }
 
-ContactsTable.propTypes = 
+ContactsAdm.propTypes = 
 {
  adm_cntData: PropTypes.shape(
   {
@@ -108,5 +108,5 @@ ContactsTable.propTypes =
  , onIntroCellEdit: PropTypes.func.isRequired
 }
 
-export default ContactsTable
+export default ContactsAdm
 

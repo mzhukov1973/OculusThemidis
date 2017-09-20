@@ -39,7 +39,7 @@ function onAfterSaveCell(row, cellName, cellValue) {
   alert('The whole row :\n' + rowStr);
 }
 */
-class PriceTableList extends React.Component {
+class Price extends React.Component {
 
 // add this to <BootstrapTable ... when dealing with an admin:   cellEdit={{ mode:'click', blurToSave: true, afterSaveCell: this.props.onCellEdit }}  insertRow={ true } options={ { afterInsertRow:this.props.onClick, insertText: 'Добавить позицию'} }
   render() {
@@ -55,7 +55,7 @@ class PriceTableList extends React.Component {
   }
 }
 
-PriceTableList.propTypes = {
+Price.propTypes = {
   priceData: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
@@ -67,5 +67,5 @@ PriceTableList.propTypes = {
   ).isRequired
 }
 
-export default PriceTableList
+export default Price
 

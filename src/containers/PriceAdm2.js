@@ -14,22 +14,29 @@
 /*  limitations under the License.                                           */
 /*===========================================================================*/
 import { connect } from 'react-redux'
-import About_adm from '../components/About_adm'
-import { abtADD, abtDEL, abtEDIT } from'../actions'
+import { priceADD, priceDEL, priceEDIT } from'../actions'
+import PriceAdm from '../components/PriceAdm'
 
 const mapStateToProps = ( state ) => {
-  return { adm_abtData: state.adm_abtData };
+  return {adm_priceData: state.adm_priceData };
 }
 
-const mapDispatchToProps = (dispatch,ownProps) => 
-{
+const mapDispatchToProps = (dispatch,ownProps) => {
   return {
-   onAbtClickAdd: (row)                    => {dispatch({type:abtADD.REQ, 'row':row});}, 
-   onAbtClickDel: (row)                    => {dispatch({type:abtDEL.REQ, 'row':row});}, 
-   onAbtCellEdit: (row,cellName,cellValue) => {dispatch({type:abtEDIT.REQ,'row':row,'cellName':cellName,'cellValue':cellValue});} 
+    onClickAdd: (row) => {
+     dispatch({type:priceADD.REQ, 'row':row});//Sending PUSH_NEW_PRICE_ITEM_REQUEST action, to be intercepted by Saga watcher
+    },
+    onClickDel: (row) => {
+     dispatch({type:priceDEL.REQ, 'row':row});//Sending DEL_PRICE_ITEM_REQUEST action, to be intercepted by Saga watcher
+    },
+    onCellEdit: (row,cellName,cellValue) => {
+     dispatch({type:priceEDIT.UPD, 'id':row.id, 'updating':1});
+     dispatch({type:priceEDIT.REQ,'row':row,'cellName':cellName,'cellValue':cellValue});//Sending EDIT_PRICE_ITEM_REQUEST action, to be intercepted by Saga watcher
+    }
   }
 }
 
-const About_adm2 = connect(mapStateToProps,mapDispatchToProps)(About_adm);
 
-export default About_adm2
+const PriceAdm2 = connect(mapStateToProps,mapDispatchToProps)(PriceAdm);
+
+export default PriceAdm2

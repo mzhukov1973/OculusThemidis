@@ -1,5 +1,5 @@
 # OculusThemidis
-###### Version: 0.0.4
+###### Version: 0.0.5-rc1
 
 [React.js](https://facebook.github.io/react/) based One-Page-App for one small but spunky law firm.
 
@@ -57,3 +57,5 @@
 - [ ] Properly protect admin dashboard from unauthorised access (see documentation about apps' architechture details)
 - [ ] Add i18n proper support with proper selection of language to use in [admin dashboard](https://mzhukov1973.github.io/oculus-themides/adm)
 - [ ] Add Russian language support
+- [x] ~~Refactor components' names to bring all in line with CamelCase coding style requirement~~
+- [x] ~~Move initial state to a separate module in `/modules/initialStates.js` from `/index.js`~~

@@ -14,17 +14,32 @@
 /*  limitations under the License.                                           */
 /*===========================================================================*/
 import { connect } from 'react-redux'
-import PriceTableList from '../components/PriceTableList'
-
-function checkDisplay(priceItem)
-{
- return (priceItem.visibility === 1);
-}
+import { newsADD, newsDEL, newsEDIT } from'../actions'
+import NewsAdm from '../components/NewsAdm'
 
 const mapStateToProps = ( state ) => {
-  return { priceData: state.priceData.filter(checkDisplay) };
+  return { adm_newsData: state.adm_newsData };
 }
 
-const PriceTableList2Sec = connect(mapStateToProps)(PriceTableList);
+const mapDispatchToProps = (dispatch,ownProps) => {
+  return {
+    onClickAdd: (row) => {
+     dispatch({type:newsADD.REQ, 'row':row});//Sending PUSH_NEW_NEWS_ITEM_REQUEST action, to be intercepted by Saga watcher
+    },
+    onClickDel: (row) => {
+     dispatch({type:newsDEL.REQ, 'row':row});//Sending DEL_NEWS_ITEM_REQUEST action, to be intercepted by Saga watcher
+    },
+    onCellEdit: (row,cellName,cellValue) => {
+     dispatch({type:newsEDIT.UPD, 'id':row.id, 'updating':1});
+     dispatch({type:newsEDIT.REQ,'row':row,'cellName':cellName,'cellValue':cellValue});//Sending EDIT_NEWS_ITEM_REQUEST action, to be intercepted by Saga watcher
+    }
+  }
+}
 
-export default PriceTableList2Sec
+const NewsAdm2 = connect(mapStateToProps,mapDispatchToProps)(NewsAdm);
+
+export default NewsAdm2
+
+
+
+

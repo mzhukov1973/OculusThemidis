@@ -32,7 +32,7 @@ const visTypes = [ 1, 0 ];
 
 const catTypes = [ 2, 1 ];//A hack! Should get cid list from DB.
 
-class PriceTable extends React.Component {
+class PriceAdm extends React.Component {
 
 columnClassNameF(fieldValue, row, rowIdx, colIdx) {
 // fieldValue - as is, row - the whole row object, rowIdx, colIdx - cell coords
@@ -59,7 +59,7 @@ columnClassNameF(fieldValue, row, rowIdx, colIdx) {
   }
 }
 
-PriceTable.propTypes = {
+PriceAdm.propTypes = {
   adm_priceData: PropTypes.arrayOf(
     PropTypes.shape({
       cid: PropTypes.number.isRequired,
@@ -79,4 +79,4 @@ PriceTable.propTypes = {
   , onCellEdit: PropTypes.func.isRequired
 }
 
-export default PriceTable
+export default PriceAdm

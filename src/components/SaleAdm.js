@@ -13,18 +13,45 @@
 /*  See the License for the specific language governing permissions and      */
 /*  limitations under the License.                                           */
 /*===========================================================================*/
-import { connect } from 'react-redux'
-import NewsTableList from '../components/NewsTableList'
+import React from 'react'
+import ArticleAdm from './subcomponents/ArticleAdm.js';
+import PropTypes from 'prop-types';
+import './css/admTables.css'
 
-function checkDisplay(newsItem)
+class SaleAdm extends React.Component {
+
+  render() {
+    return (
+<div>
+     <ArticleAdm articleData={this.props.adm_actData.articles[0]}/>
+     <ArticleAdm articleData={this.props.adm_actData.articles[1]}/>
+     <ArticleAdm articleData={this.props.adm_actData.articles[2]}/>
+</div>
+    );
+  }
+}
+
+SaleAdm.propTypes = 
 {
- return (newsItem.visibility === 1);
+ adm_actData: PropTypes.shape(
+  {
+   articles: PropTypes.arrayOf(PropTypes.shape(
+                {
+                 id:PropTypes.number.isRequired, 
+                 last_edit:PropTypes.string.isRequired, 
+                 hdng:PropTypes.string.isRequired, 
+                 subhdng:PropTypes.string.isRequired, 
+                 bdy:PropTypes.string.isRequired, 
+                 pic:PropTypes.string.isRequired, 
+                 bg:PropTypes.string.isRequired, 
+                 visibility:PropTypes.number.isRequired,
+                 updating:PropTypes.number.isRequired 
+                }
+               ).isRequired
+              ).isRequired
+  }
+ ).isRequired
 }
 
-const mapStateToProps = ( state ) => {
-  return { newsData: state.newsData.filter(checkDisplay) };
-}
 
-const NewsTableList2Sec = connect(mapStateToProps)(NewsTableList);
-
-export default NewsTableList2Sec
+export default SaleAdm
