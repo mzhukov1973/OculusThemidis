@@ -89,18 +89,20 @@ class Main extends Component {
       <div className="main">
        <Switch>
         <Route exact path="/"        component={News2}/>
-        <Route exact path="/adm"     component={NewsAdm2}/>
         <Route path="/news"          component={News2}/>
-        <Route path="/adm/news"      component={NewsAdm2}/>
         <Route exact path="/price"   component={Price2}/>
         <Route path="/price/:number" component={Price2}/>
-        <Route path="/adm/price"     component={PriceAdm2}/>
         <Route path="/sale"          component={Sale2}/>
-        <Route path="/adm/sale"      component={SaleAdm2}/>
         <Route path="/about"         component={About2}/>
-        <Route path="/adm/about"     component={AboutAdm2}/>
         <Route path="/contacts"      component={Contacts2}/>
+{/*
+        <Route exact path="/adm"     component={NewsAdm2}/>
+        <Route path="/adm/news"      component={NewsAdm2}/>
+        <Route path="/adm/price"     component={PriceAdm2}/>
+        <Route path="/adm/sale"      component={SaleAdm2}/>
+        <Route path="/adm/about"     component={AboutAdm2}/>
         <Route path="/adm/contacts"  component={ContactsAdm2}/>
+*/}
        </Switch>
       </div>
     );
