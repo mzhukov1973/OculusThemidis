@@ -14,8 +14,11 @@
 /*  limitations under the License.                                           */
 /*===========================================================================*/
 import React, { Component } from 'react';
-import { Navbar,Nav,NavItem,NavDropdown,MenuItem } from 'react-bootstrap';
+import { Navbar,Nav,NavItem } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import { Switch, Route, Link } from 'react-router-dom'
+
+
 
 import News2 from        '../containers/News2'
 import NewsAdm2 from     '../containers/NewsAdm2'
@@ -39,35 +42,42 @@ import './css/App.css';
 
 class Header extends Component {
   render() {
+/*className="navbarClass" className="headerClass" className="brandClass"*/
     return (
       <div className="header">
-<MuiThemeProvider>
- <Navbar className="navbarClass">
-    <Navbar.Header className="headerClass">
-      <Navbar.Brand className="brandClass">
-        <Link to="/"><span className="brandSmallFont">Юридическое бюро</span><br/><span className="brandLargeFont">Ваш Поверенный</span></Link>
-      </Navbar.Brand>
-    </Navbar.Header>
-    <Nav>
-      <NavItem eventKey={1}><Link to="/news">Новости</Link></NavItem>
-       <NavDropdown eventKey={2} title="Услуги и Цены" id="basic-nav-dropdown">
-        <MenuItem eventKey={2.1}><Link to="/price/1">Для физических лиц</Link></MenuItem>
-        <MenuItem eventKey={2.2}><Link to="/price/2">Для юридических лиц</Link></MenuItem>
-        <MenuItem divider />
-        <MenuItem eventKey={2.3}><Link to="/price">Весь прайс-лист</Link></MenuItem>
-      </NavDropdown>
-      <NavItem eventKey={3}><Link to="/sale">Акции</Link></NavItem>
-       <NavDropdown eventKey={4} title="О компании" id="basic-nav-dropdown">
-        <MenuItem eventKey={4.1}><Link to="/about">О нас</Link></MenuItem>
-        <MenuItem eventKey={4.2}><Link to="/contacts">Контакты</Link></MenuItem>
-      </NavDropdown>
-      <NavItem eventKey={5}><Link to="/adm/news">АДМ [Новости]</Link></NavItem>
-      <NavItem eventKey={6}><Link to="/adm/price">АДМ [Услуги и Цены]</Link></NavItem>
-      <NavItem eventKey={7}><Link to="/adm/about">АДМ [О нас]</Link></NavItem>
-      <NavItem eventKey={8}><Link to="/adm/contacts">АДМ [Контакты]</Link></NavItem>
-    </Nav>
- </Navbar>
-</MuiThemeProvider>
+       <MuiThemeProvider>
+        <Navbar inverse collapseOnSelect>
+          <Navbar.Header className="headerClass">
+           <Link to="/">
+            <Navbar.Brand className="brandClass">
+             <span className="brandSmallFont">Юридическое бюро</span><br/>
+             <span className="brandLargeFont">Ваш Поверенный</span>
+            </Navbar.Brand>
+           </Link>
+           <Navbar.Toggle/>
+          </Navbar.Header>
+          <Navbar.Collapse>
+            <Nav>
+             <LinkContainer to="/news"    ><NavItem eventKey={1}>Новости            </NavItem></LinkContainer>
+             <LinkContainer to="/price/1" ><NavItem eventKey={2}>Для физических лиц </NavItem></LinkContainer>
+             <LinkContainer to="/price/2" ><NavItem eventKey={3}>Для юридических лиц</NavItem></LinkContainer>
+             <LinkContainer to="/sale"    ><NavItem eventKey={4}>Акции              </NavItem></LinkContainer>
+             <LinkContainer to="/about"   ><NavItem eventKey={5}>О нас              </NavItem></LinkContainer>
+             <LinkContainer to="/contacts"><NavItem eventKey={6}>Контакты           </NavItem></LinkContainer>
+            </Nav>
+{/*
+            <Nav pullRight>
+             <LinkContainer to="/adm" exact   ><NavItem eventKey={7} >АДМ [Dashboard]    </NavItem></LinkContainer>
+             <LinkContainer to="/adm/news"    ><NavItem eventKey={8} >АДМ [Новости]      </NavItem></LinkContainer>
+             <LinkContainer to="/adm/price"   ><NavItem eventKey={9} >АДМ [Услуги и Цены]</NavItem></LinkContainer>
+             <LinkContainer to="/adm/sale"    ><NavItem eventKey={10}>АДМ [Акции]        </NavItem></LinkContainer>
+             <LinkContainer to="/adm/about"   ><NavItem eventKey={11}>АДМ [О нас]        </NavItem></LinkContainer>
+             <LinkContainer to="/adm/contacts"><NavItem eventKey={12}>АДМ [Контакты]     </NavItem></LinkContainer>
+            </Nav>
+*/}
+          </Navbar.Collapse>
+        </Navbar>
+       </MuiThemeProvider>
       </div>
     );
   }
@@ -77,25 +87,21 @@ class Main extends Component {
   render() {
     return (
       <div className="main">
-<Switch>
- <Route exact path="/"        component={News2}/>
-
- <Route path="/news"          component={News2}/>
- <Route path="/adm/news"      component={NewsAdm2}/>
-
- <Route exact path="/price"   component={Price2}/>
- <Route path="/price/:number" component={Price2}/>
- <Route path="/adm/price"     component={PriceAdm2}/>
-
- <Route path="/sale"          component={Sale2}/>
- <Route path="/adm/sale"      component={SaleAdm2}/>
-
- <Route path="/about"         component={About2}/>
- <Route path="/adm/about"     component={AboutAdm2}/>
-
- <Route path="/contacts"      component={Contacts2}/>
- <Route path="/adm/contacts"  component={ContactsAdm2}/>
-</Switch>
+       <Switch>
+        <Route exact path="/"        component={News2}/>
+        <Route exact path="/adm"     component={NewsAdm2}/>
+        <Route path="/news"          component={News2}/>
+        <Route path="/adm/news"      component={NewsAdm2}/>
+        <Route exact path="/price"   component={Price2}/>
+        <Route path="/price/:number" component={Price2}/>
+        <Route path="/adm/price"     component={PriceAdm2}/>
+        <Route path="/sale"          component={Sale2}/>
+        <Route path="/adm/sale"      component={SaleAdm2}/>
+        <Route path="/about"         component={About2}/>
+        <Route path="/adm/about"     component={AboutAdm2}/>
+        <Route path="/contacts"      component={Contacts2}/>
+        <Route path="/adm/contacts"  component={ContactsAdm2}/>
+       </Switch>
       </div>
     );
   }

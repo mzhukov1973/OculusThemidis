@@ -15,125 +15,35 @@
 /*===========================================================================*/
 @import '../fonts/BadScript400-64.css';
 
-.App {
-  text-align: center;
-}
+.App { text-align: center; }
+.App-logo { animation: App-logo-spin infinite 20s linear; height: 80px; }
+.App-header { background-color: #222;  height: 150px;  padding: 20px;  color: white; }
+.App-intro { font-size: large; }
+@keyframes App-logo-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+.tableDiv { padding-left:2em; padding-right:2em; padding-top:1em; padding-bottom:1em; }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
+.listSmallText{ font-size:60%; font-weight:bold; }
 
-.App-intro {
-  font-size: large;
-}
+.showBorder { border:1px solid black; }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+.newsItemPrimaryText { text-align:left; font-weight:600; }
+.newsItemSecondaryText { text-align:left; padding-left:1em; }
 
-.tableDiv
-{
- padding-left:2em;
- padding-right:2em;
- padding-top:1em;
- padding-bottom:1em;
-}
+.divInList { margin-top:1em; margin-bottom:1em; margin-left:1em; margin-right:0px; }
 
-.listSmallText
-{
- font-size:60%;
- font-weight:bold;
-}
+.saleClass { margin-top:1em; margin-bottom:1em; margin-left:0.5em; margin-right:0.5em; }
 
-.showBorder
-{
- border:1px solid black;
-}
-
-.newsItemPrimaryText
-{
- text-align:left;
- font-weight:600;
-}
-
-.newsItemSecondaryText
-{
- text-align:left;
- padding-left:1em;
-}
-
-.divInList
-{
- margin-top:1em;
- margin-bottom:1em;
- margin-left:1em;
- margin-right:0px;
-}
-
-.saleClass
-{
- margin-top:1em;
- margin-bottom:1em;
- margin-left:0.5em;
- margin-right:0.5em;
-}
-
-.header
-{
-}
-
-.navbarClass
-{
- background:rgba(255,255,255,0.6) url("") no-repeat center center;
-}
-
-.headerClass
-{
- background-color:rgba(0,0,0,0);
-}
-
-.brandClass
-{
- padding-top:0.05em;
- background:rgba(0,0,0,0.2) url("") no-repeat right top;
- border-radius:10px;
-}
-
-.brandSmallFont
-{
- font-family:'Arial';
- font-size:45%;
- font-weight:700;
- font-style:normal;
- text-transform:uppercase;
-}
-.brandLargeFont
-{
- font-family:'BadScript';
- font-size:110%;
- font-weight:700;
- font-style:normal;
- text-transform:none;
- color:rgba(0,0,0,1);
-}
+.header { }
+.navbarClass { background:rgba(255,255,255,0.6) url("") no-repeat center center; }
+.headerClass { background-color:rgba(0,0,0,0); }
+.brandClass { padding-top:0.05em; background:rgba(0,0,0,0.2) url("") no-repeat right top; border-radius:10px; }
+.brandSmallFont { font-family:'Arial'; font-size:45%; font-weight:700; font-style:normal; text-transform:uppercase; }
+.brandLargeFont { font-family:'BadScript'; font-size:110%; font-weight:700; font-style:normal; text-transform:none; color:rgba(0,0,0,1); }
 /*BadScript(400)*/
 
-.main
-{
-/*   background:url("css/bg-02-slim.jpg") no-repeat fixed center center;*/
-}
+.main { /*background:url("css/bg-02-slim.jpg") no-repeat fixed center center;*/ }
 
-.aboutItem
-{
- margin-top:1em;
-}
+.aboutItem { margin-top:1em; }
 
+.active { color:white; background-color:rgba(100,100,200,1); font-weight:700; border-radius:4px; }

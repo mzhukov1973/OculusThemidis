@@ -13,25 +13,70 @@
 /*  See the License for the specific language governing permissions and      */
 /*  limitations under the License.                                           */
 /*===========================================================================*/
-import { combineReducers } from 'redux'
-import priceData from './priceData'
-import adm_priceData from './adm_priceData'
-import newsData from './newsData'
-import adm_newsData from './adm_newsData'
-import cntData from './cntData'
-import adm_cntData from './adm_cntData'
-import abtData from './abtData'
-import adm_abtData from './adm_abtData'
-import actData from './actData'
-import adm_actData from './adm_actData'
-//import uiContactsCarousel from './uiContactsCarousel'
+import {adm_actLOAD,actADD,actEDIT,actDEL} from '../actions'
 
-const mainReducer = combineReducers({
-  priceData, adm_priceData,
-  newsData,  adm_newsData,
-  cntData,   adm_cntData,
-  abtData,   adm_abtData,
-  actData,   adm_actData
-});
+const adm_actData = (state = [], action) => {
+ let itm = [], aidx;
+ switch(action.type)
+ {
+  case actADD.REQ:
+   return state;
 
-export default mainReducer
+  case actADD.FAIL:
+   return state;
+
+  case actADD.OK:
+   return state;
+
+
+
+  case actEDIT.REQ:
+   return state;
+
+  case actEDIT.FAIL:
+   return state;
+
+  case actEDIT.OK:
+   return state;
+
+
+
+  case actEDIT.UPD:
+   itm = [...state];
+   aidx = itm.findIndex(function(el,idx,arr){return (Number(el.id)===Number(action.id));});
+   itm[aidx].updating = action.updating;
+//Stupid hack, get rid of it:
+   itm[aidx].id = Number(itm[aidx].id);
+   itm[aidx].visibility = Number(itm[aidx].visibility);
+   return itm;
+
+
+
+  case actDEL.REQ:
+   return state;
+
+  case actDEL.FAIL:
+   return state;
+
+  case actDEL.OK:
+   return state;
+
+
+
+  case adm_actLOAD.REQ:
+   return state;
+
+  case adm_actLOAD.FAIL:
+   return state;
+
+  case adm_actLOAD.OK:
+   return action.dat;
+
+
+
+  default:
+   return state;
+ }
+}
+
+export default adm_actData

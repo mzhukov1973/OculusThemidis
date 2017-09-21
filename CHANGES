@@ -25,4 +25,7 @@ Version History
 
 0.0.5-rc1
         - Refactored components' names to bring all in line with CamelCase coding style requirement
+        - Added stump components for dangling navigation points that have lacked them (Sale, SaleAdm)
         - Moved initial state to a separate module in `/modules/initialStates.js` from `/index.js`
+        - Changed current navigation bar to react-bootstraps' collapsible Navbar with navigation links provided by NavItems wrapped in LinkContainers from react-router-bootstrap - it now works correctly for both mobile and desktop/tablet cases
+        - Added email field to "bugs" in package.json

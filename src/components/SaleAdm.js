@@ -26,6 +26,7 @@ class SaleAdm extends React.Component {
      <ArticleAdm articleData={this.props.adm_actData.articles[0]}/>
      <ArticleAdm articleData={this.props.adm_actData.articles[1]}/>
      <ArticleAdm articleData={this.props.adm_actData.articles[2]}/>
+     <ArticleAdm articleData={this.props.adm_actData.articles[3]}/>
 </div>
     );
   }

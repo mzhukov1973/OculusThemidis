@@ -14,7 +14,7 @@
 /*  limitations under the License.                                           */
 /*===========================================================================*/
 import { connect } from 'react-redux'
-import { uiCntCarACT } from'../actions'
+//import { uiCntCarACT } from'../actions'
 import About from '../components/About'
 
 const mapStateToProps = ( state ) => { 

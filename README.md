@@ -18,7 +18,8 @@
 - [x] ~~Add icon sizes other than 192x192 and 512x512 (namely: 48x48, 64x64 72x72, 96x96, 128x128, 144x144, 168x168, 256x256, 384x384) - all PNGs~~
 - [x] ~~Add resources for splashscreen generation and reference them in `/manifest.json`~~
 - [x] ~~Update `/favicon.ico` to include more different resolutions for the favicon. (Expand it from 16, 32 & 48 to 16, 32, 48, 64, 72, 96, 128 & 256 sized favicon.ico images)~~
-- [ ] Change current navigation bar to something more aesthetically palatable for both mobile and desktop/tablet cases
+- [x] ~~Change current navigation bar to something more aesthetically palatable for both mobile and desktop/tablet cases~~
+- [ ] Now that navbar works correctly and LinkContainers made everything good, fiddle with classes to make Navbar.Brand look as intended
 - [ ] Check web app features work as intended:
    - [ ] Splash screen works with phones
       - [ ] For Android
@@ -65,3 +66,5 @@
    - [ ] :question:*Tablet*:question:
    - [ ] :computer:**<HD** Desktop
    - [ ] :computer:**&#x2267;HD** High-Res Desktop
+- [x] ~~Add stump components for dangling navigation points that have lacked them (Sale, SaleAdm)~~
+- [ ] Solve the riddle of the invisible app, when site is viewed in Chrome for Android on Android phone

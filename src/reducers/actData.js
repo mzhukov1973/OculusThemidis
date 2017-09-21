@@ -13,25 +13,29 @@
 /*  See the License for the specific language governing permissions and      */
 /*  limitations under the License.                                           */
 /*===========================================================================*/
-import { combineReducers } from 'redux'
-import priceData from './priceData'
-import adm_priceData from './adm_priceData'
-import newsData from './newsData'
-import adm_newsData from './adm_newsData'
-import cntData from './cntData'
-import adm_cntData from './adm_cntData'
-import abtData from './abtData'
-import adm_abtData from './adm_abtData'
-import actData from './actData'
-import adm_actData from './adm_actData'
-//import uiContactsCarousel from './uiContactsCarousel'
+import {actLOAD} from '../actions'
 
-const mainReducer = combineReducers({
-  priceData, adm_priceData,
-  newsData,  adm_newsData,
-  cntData,   adm_cntData,
-  abtData,   adm_abtData,
-  actData,   adm_actData
-});
+const actData = (state = [], action) => {
+ switch(action.type)
+ {
 
-export default mainReducer
+
+
+  case actLOAD.REQ:
+   return state;
+
+  case actLOAD.FAIL:
+   return state;
+
+  case actLOAD.OK:
+   return action.dat;
+
+
+
+
+  default:
+   return state;
+ }
+}
+
+export default actData
