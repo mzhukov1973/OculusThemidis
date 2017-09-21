@@ -59,3 +59,9 @@
 - [ ] :question:*Add Russian language support*
 - [x] ~~Refactor components' names to bring all in line with CamelCase coding style requirement~~
 - [x] ~~Move initial state to a separate module in `/modules/initialStates.js` from `/index.js`~~
+- [ ] Add proper media queries so that everything is responsive, not only components that are already responsive by design; differentiate between high-res/low-res phones & high-res/low-res desktops, since they obviously require different styles:
+   - [ ] :iphone:**<XXHDPI** Phone
+   - [ ] :iphone:**&#x2267;XXHDPI** High-Res Phone
+   - [ ] :question:*Tablet*:question:
+   - [ ] :computer:**<HD** Desktop
+   - [ ] :computer:**&#x2267;HD** High-Res Desktop
