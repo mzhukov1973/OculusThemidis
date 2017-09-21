@@ -29,3 +29,4 @@ Version History
         - Moved initial state to a separate module in `/modules/initialStates.js` from `/index.js`
         - Changed current navigation bar to react-bootstraps' collapsible Navbar with navigation links provided by NavItems wrapped in LinkContainers from react-router-bootstrap - it now works correctly for both mobile and desktop/tablet cases
         - Added email field to "bugs" in package.json
+        - Solved the riddle of the invisible app, when site is viewed in Chrome for Android on Android phone (it was devtools for redux causing trouble when integrating with saga middleware to create redux store)

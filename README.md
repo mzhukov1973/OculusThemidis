@@ -67,4 +67,4 @@
    - [ ] :computer:**<HD** Desktop
    - [ ] :computer:**&#x2267;HD** High-Res Desktop
 - [x] ~~Add stump components for dangling navigation points that have lacked them (Sale, SaleAdm)~~
-- [ ] Solve the riddle of the invisible app, when site is viewed in Chrome for Android on Android phone
+- [x] ~~Solve the riddle of the invisible app, when site is viewed in Chrome for Android on Android phone~~
