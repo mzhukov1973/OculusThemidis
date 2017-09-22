@@ -22,25 +22,25 @@
 - [ ] Now that navbar works correctly and LinkContainers made everything good, fiddle with classes to make Navbar.Brand look as intended
 - [ ] Check web app features work as intended:
    - [ ] Splash screen works with phones
-      - [ ] For Android
+      - [x] ~~For Android~~
       - [ ] For iOS
    - [ ] Launch icons are chosen correctly for devices' screen dpi
-      - [ ] For Android
+      - [ ] ~~For Android~~
       - [ ] For iOS
    - [ ] App name is derived correctly from `/manifest.json`
-      - [ ] For Android
+      - [x] ~~For Android~~
       - [ ] For iOS
    - [ ] Apps' chosen display mode (standalone) is honoured by the device
-      - [ ] For Android
+      - [x] ~~For Android~~
       - [ ] For iOS
    - [ ] Service worker works as intended
       - [ ] For reading data from the server
-         - [ ] For Android
+         - [x] ~~For Android~~
          - [ ] For iOS
       - [ ] For writing data to the server
          - [ ] For Android
          - [ ] For iOS
-- [ ] Make sure live version of the site/app correctly works with our test server back end
+- [ ] Make sure live version of the site/app correctly works with our test server backend
 - [ ] Add minimal set of decorative images (i.e. backgrounds, premises&staff photos at the [**Contacts**](https://mzhukov1973.github.io/oculus-themides/contacts) section, etc)
 - [ ] Add final font set to the site, make sure it is minimal and imported only by components, that need them
 - [ ] Update admin dashboard functionality:
