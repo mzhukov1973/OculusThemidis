@@ -40,7 +40,7 @@
       - [ ] For writing data to the server
          - [ ] For Android
          - [ ] For iOS
-- [ ] Make sure live version of the site/app correctly works with our test server back-end
+- [x] ~~Make sure live version of the site/app correctly works with our test server back-end~~
 - [ ] Add minimal set of decorative images (i.e. backgrounds, premises&staff photos at the [**Contacts**](https://mzhukov1973.github.io/oculus-themides/contacts) section, etc)
 - [ ] Add final font set to the site, make sure it is minimal and imported only by components, that need them
 - [ ] Update admin dashboard functionality:

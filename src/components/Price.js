@@ -20,31 +20,11 @@ import './css/bootstrap.min.css';
 import './css/bootstrap-theme.min.css';
 import './css/react-bootstrap-table-all.min.css';
 
-const selectRowProp = {
-  mode: 'checkbox',
-  bgColor: 'pink', // you should give a bgcolor, otherwise, you can't regonize which row has been selected
-  hideSelectColumn: true,  // enable hide selection column.
-  clickToSelect: true  // you should enable clickToSelect, otherwise, you can't select column.
-};
-
-/*
-function onAfterSaveCell(row, cellName, cellValue) {
-  alert(`Save cell ${cellName} with value ${cellValue}`);
-
-  let rowStr = '';
-  for (const prop in row) {
-    rowStr += prop + ': ' + row[prop] + '\n';
-  }
-
-  alert('The whole row :\n' + rowStr);
-}
-*/
 class Price extends React.Component {
 
-// add this to <BootstrapTable ... when dealing with an admin:   cellEdit={{ mode:'click', blurToSave: true, afterSaveCell: this.props.onCellEdit }}  insertRow={ true } options={ { afterInsertRow:this.props.onClick, insertText: 'Добавить позицию'} }
   render() {
     return (
-      <BootstrapTable data={ this.props.priceData } striped hover selectRow={ selectRowProp }>
+      <BootstrapTable data={ this.props.priceData } striped hover>
           <TableHeaderColumn dataField='id' isKey>Product ID</TableHeaderColumn>
           <TableHeaderColumn dataField='shrt_name'>Short name</TableHeaderColumn>
           <TableHeaderColumn dataField='price_rur'>Price, RUR</TableHeaderColumn>
