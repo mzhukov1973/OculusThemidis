@@ -40,7 +40,7 @@
       - [ ] For writing data to the server
          - [ ] For Android
          - [ ] For iOS
-- [ ] Make sure live version of the site/app correctly works with our test server backend
+- [ ] Make sure live version of the site/app correctly works with our test server back-end
 - [ ] Add minimal set of decorative images (i.e. backgrounds, premises&staff photos at the [**Contacts**](https://mzhukov1973.github.io/oculus-themides/contacts) section, etc)
 - [ ] Add final font set to the site, make sure it is minimal and imported only by components, that need them
 - [ ] Update admin dashboard functionality:
@@ -68,3 +68,8 @@
    - [ ] :computer:**&#x2267;HD** High-Res Desktop
 - [x] ~~Add stump components for dangling navigation points that have lacked them (Sale, SaleAdm)~~
 - [x] ~~Solve the riddle of the invisible app, when site is viewed in Chrome for Android on Android phone~~
+- [ ] Redo price-lists' front-ends (initial state with relevant info, then copy it to DB too)
+- [ ] Do "About us" section properly, design-wise (initial state with relevant info, then copy it to DB too)
+- [ ] Add at least a UI placeholder for "Sale" section 
+- [ ] Fill "Contacts" initial state with relevant info, then copy it to DB too, add images
+   
