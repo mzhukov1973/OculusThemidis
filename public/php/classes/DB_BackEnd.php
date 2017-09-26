@@ -17,8 +17,10 @@
    $conn_str = "host=".self::DB_ADDR." port=".self::DB_PORT." dbname=".self::DB_NAME." user=".self::DB_USER." password=".self::DB_PASS;
    $ex_msg = "Unable to connect to ".self::DB_TYPE." database '".self::DB_NAME."', at ".self::DB_ADDR.":".self::DB_PORT." as user ".self::DB_USER.".";
    $this->dbconn = pg_connect($conn_str);
-   if ($this->dbconn === false) { throw new \Exception($ex_msg,-1,__FILE__,__LINE__); }
+   if ($this->dbconn === false) { $ex_msg = $ex_msg." ||| ".__FILE__." line:".__LINE__; throw new \Exception($ex_msg,-1); }
   }
+
+
 
   public function __destruct() { pg_close($this->dbconn); }
 

@@ -1,4 +1,15 @@
 export const products = [
+/*
+cat shrt_name <e.g: ''  >
+cat_descr     <e.g: ''  >
+id            <e.g: 3   >
+cid           <e.g: 2   >
+shrt_name     <e.g: ''  >
+descr         <e.g: ''  >
+price_rur     <e.g: 120 >
+comment       <e.g: ''  >
+visibility    <e.g: 1/0 >
+*/
                   {cat_shrt_name:"cat shrt_name", cat_descr:"cat descr", id: 1,  cid: 1,  shrt_name: "Product1",  descr: "Long descr of service 1",  price_rur: 120, comment:"Comment for service 1 (if any).",  visibility: 1    }, 
                   {cat_shrt_name:"cat shrt_name", cat_descr:"cat descr", id: 2,  cid: 1,  shrt_name: "Product2",  descr: "Long descr of service 2",  price_rur: 122, comment:"Comment for service 2 (if any).",  visibility: 1    }, 
                   {cat_shrt_name:"cat shrt_name", cat_descr:"cat descr", id: 3,  cid: 1,  shrt_name: "Product3",  descr: "Long descr of service 3",  price_rur: 123, comment:"Comment for service 3 (if any).",  visibility: 1    }, 
