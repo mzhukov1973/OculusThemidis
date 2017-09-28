@@ -23,7 +23,7 @@ Version History
           - Added splashscreen resources
           - Updated more versions of favicon to favicon.ico. It cow contains 16,32,48,64,72,96,128 and 256 sized favicon.ico images
 
-0.0.5-rc1
+0.0.5-alpha.1
         - Refactored components' names to bring all in line with CamelCase coding style requirement
         - Added stump components for dangling navigation points that have lacked them (Sale, SaleAdm)
         - Moved initial state to a separate module in `/modules/initialStates.js` from `/index.js`

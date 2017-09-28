@@ -14,7 +14,7 @@
    limitations under the License.
 -->
 # OculusThemidis
-###### Version: 0.0.5-rc1
+###### Version: 0.0.5-alpha.1
 
 [React.js](https://facebook.github.io/react/) based One-Page-App for one small but spunky law firm.
 
